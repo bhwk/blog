@@ -3,7 +3,7 @@
 	export let data: PageData;
 </script>
 
-<title>{data.post.details.title}</title>
+<title>{data.post?.title}</title>
 <article class="prose">
-	{@html data.post.content}
+	{@html data.post?.content}
 </article>
