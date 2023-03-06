@@ -1,6 +1,6 @@
-import type { Load } from '@sveltejs/kit';
+// import type { Load } from '@sveltejs/kit';
+import type { PageServerLoad } from './$types';
 import { compile } from 'mdsvex';
-/** @type {import('./$types').PageLoad} */
 
 const MOCK_RESPONSE_FROM_API = `
 ---
@@ -18,15 +18,14 @@ Instructions on how to use them in your application are linked below.
 | Google Analytics | [plugins/googleanalytics/README.md](Link) |
 `;
 
-export const load: Load = async () => {
+export const load = (async () => {
 	const response = MOCK_RESPONSE_FROM_API; // Get data with eg. `fetch`
 	const compiledResponse = await compile(response);
-	console.log(compiledResponse);
 
 	return {
 		post: {
 			content: compiledResponse?.code,
-			details: compiledResponse?.data?.fm
+			details: compiledResponse?.data?.fm as { title: string }
 		}
 	};
-};
+}) satisfies PageServerLoad;
