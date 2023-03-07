@@ -1,1 +1,2 @@
-<a href="posts">Posts</a>
+<div>This is the homepage</div>
+
