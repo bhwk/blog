@@ -6,11 +6,11 @@
 	let { allPosts } = data;
 </script>
 
-<div class="flex flex-1 flex-col gap-8">
+<div class="flex flex-1 flex-col gap-4">
 	{#each allPosts as post}
 		<a href={'posts/' + post.slug} class="flex-1 rounded-sm flex flex-col">
 			<PostHeader title={post.title} date={'24-12-2050'} tags={['#Testing']} />
-			<div class="text-content font-semibold line-clamp-10 my-4">
+			<div class="text-content font-semibold line-clamp-10">
 				{post.content}
 			</div>
 		</a>
