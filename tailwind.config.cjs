@@ -8,6 +8,9 @@ module.exports = {
 				8: '8',
 				9: '9',
 				10: '10'
+			},
+			backgroundImage: {
+				image: "url('/synthwave-night-sunset-anime-girl-4k-2j.jpg')"
 			}
 		}
 	},
