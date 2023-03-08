@@ -1,18 +1,9 @@
-<div class="screen">
-	<div class="pan-overlay screen-overlay" />
-	<div class="bg-image w-full h-full bg-contain bg-no-repeat" />
+<div class="w-full relative aspect-video">
+	<div class="bg-image -z-20 w-full h-full absolute bg-cover" />
+	<div class="screen-overlay -z-10 w-full h-full absolute left-0 top-0 opacity-60" />
 </div>
 
 <style>
-	.screen {
-		width: 500px;
-		border: 3px solid theme('colors.slate.700');
-		aspect-ratio: 10 / 16;
-		border-radius: 1rem;
-		background-color: theme('colors.slate.500');
-		position: relative;
-	}
-
 	.screen-overlay {
 		background: linear-gradient(
 			theme('colors.slate.700'),
@@ -21,11 +12,7 @@
 			transparent 9px
 		);
 		background-size: 100% 9px;
-		width: 100%;
-		height: 100%;
 		animation: pan-overlay 30s infinite linear;
-		position: absolute;
-		opacity: 0.6;
 	}
 
 	@keyframes pan-overlay {
