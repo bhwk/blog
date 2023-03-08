@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 export const load = (async ({ params }) => {
 	const response = await prisma.post.findMany({
 		where: {
-			title: {
+			slug: {
 				equals: params.slug
 			}
 		}
@@ -30,7 +30,7 @@ export const load = (async ({ params }) => {
 		return {
 			post: {
 				content: compiledResponse?.code,
-				title: params.slug
+				title: response[0].title
 			}
 		};
 	}
