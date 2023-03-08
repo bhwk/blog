@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Screen from '../components/Screen.svelte';
 </script>
 
-<Screen />
+<div>this is the homepage</div>

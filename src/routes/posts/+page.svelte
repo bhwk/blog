@@ -7,9 +7,14 @@
 
 <div class="flex flex-1 flex-col gap-8">
 	{#each allPosts as post}
-		<a href={'posts/' + post.title} class="p-4 flex-1 rounded-sm flex flex-col">
-			<div class="font-bold text-2xl pb-2 border-b-2 border-black border-dashed">{post.title}</div>
-			<div class="line-clamp-10 my-4">
+		<a href={'posts/' + post.title} class="flex-1 rounded-sm flex flex-col">
+			<div class="font-bold text-2xl text-title pb-2 border-b-2 border-[#f7768e] border-dashed">
+				{post.title}
+			</div>
+			<div class="text-tag text-md">
+				<span class="text-date">&lt;Date&gt;: 24-12-2050</span> | &lt;Tags&gt;: #testing tag
+			</div>
+			<div class="text-content font-semibold line-clamp-10 my-4">
 				{post.content}
 			</div>
 		</a>

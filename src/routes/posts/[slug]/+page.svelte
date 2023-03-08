@@ -4,6 +4,6 @@
 </script>
 
 <title>{data.post?.title}</title>
-<article class="prose">
+<article class="prose text-content">
 	{@html data.post?.content}
 </article>
