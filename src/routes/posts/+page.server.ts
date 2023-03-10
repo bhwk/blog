@@ -1,10 +1,6 @@
 import type { PageServerLoad } from './$types';
-import { PrismaClient } from '@prisma/client';
-import type { Post } from '@prisma/client';
-const prisma = new PrismaClient();
+import { allPosts } from '../../utils/db';
 
 export const load = (async () => {
-	return {
-		allPosts: await prisma.post.findMany()
-	};
+	return allPosts();
 }) satisfies PageServerLoad;

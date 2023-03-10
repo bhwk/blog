@@ -3,11 +3,16 @@
 	import PostHeader from '../../../components/PostHeader.svelte';
 	export let data: PageData;
 	let { post } = data;
-	let title = post?.title as string;
 </script>
 
-<title>{title}</title>
-<PostHeader {title} date={'20-20-2040'} tags={['#testing']} />
+<title>{post.title}</title>
+<PostHeader
+	title={post.title}
+	year={post.publishedAt.getFullYear()}
+	month={post.publishedAt.getMonth()}
+	day={post.publishedAt.getDay()}
+	tags={['#testing']}
+/>
 <article class="prose text-content prose-h1:text-2xl prose-h1:text-title">
 	{@html post?.content}
 </article>
