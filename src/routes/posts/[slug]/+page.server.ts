@@ -10,7 +10,8 @@ export const load = (async ({ params }) => {
 		post: {
 			content: compiledResponse?.code as string,
 			title: response.title,
-			publishedAt: response.publishedAt
+			publishedAt: response.publishedAt,
+			tags: response.tags
 		}
 	};
 }) satisfies PageServerLoad;

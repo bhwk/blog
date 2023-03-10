@@ -2,9 +2,11 @@ import { PrismaClient } from '@prisma/client';
 import { error } from '@sveltejs/kit';
 import { compile } from 'mdsvex';
 const prisma = new PrismaClient();
+
 export async function allPosts() {
 	const allPosts = await prisma.post.findMany({
-		where: { published: true }
+		where: { published: true },
+		include: { tags: true }
 	});
 	allPosts.forEach(async (post) => {
 		const response = await compile(post.content as string);
@@ -20,6 +22,9 @@ export async function getPost(slug: string) {
 		.findUniqueOrThrow({
 			where: {
 				slug: slug
+			},
+			include: {
+				tags: true
 			}
 		})
 		.catch(() => {
