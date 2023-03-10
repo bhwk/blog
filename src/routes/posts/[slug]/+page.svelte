@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import PostHeader from '../../../components/PostHeader.svelte';
+	import Content from '../../../components/Content.svelte';
 	export let data: PageData;
 	let { post } = data;
 </script>
@@ -13,6 +14,6 @@
 	day={post.publishedAt.getDay()}
 	tags={['#testing']}
 />
-<article class="prose text-content prose-h1:text-2xl prose-h1:text-title">
+<Content>
 	{@html post?.content}
-</article>
+</Content>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import PostHeader from '../../components/PostHeader.svelte';
+	import Content from '../../components/Content.svelte';
 	export let data: PageData;
 	let { allPosts } = data;
 </script>
@@ -17,8 +18,10 @@
 				day={post.publishedAt.getDay()}
 				tags={['#Testing']}
 			/>
-			<div class="text-content font-semibold line-clamp-10">
-				{@html post.content}
+			<div class="line-clamp-5">
+				<Content>
+					{@html post.content}
+				</Content>
 			</div>
 		</a>
 	{/each}
