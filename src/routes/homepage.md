@@ -7,16 +7,16 @@ This whole blog was basically a experiment for me. I wanted to tryout the combin
 # The stack
 
 Frontend: 
-- Sveltekit (The routing and Page load features are pretty cool)
-- Tailwindcss (This just make styling everything a lot simpler)
+- [Sveltekit](https://kit.svelte.dev) (The routing and Page load features are pretty cool)
+- [Tailwindcss](https://tailwindcss.com) (This just make styling everything a lot simpler)
 
 Backend:
-- Supabase (To store the blog posts and stuff)
-- Prisma (It really makes everything a lot easier)
-- mdsvex (The one and only svelte markdown preprocessor, it's in charge of rendering our markdown into html that we can put on the page)
+- [Supabase](https://supabase.com) (To store the blog posts and stuff)
+- [Prisma](https://www.prisma.io) (It really makes everything a lot easier)
+- [mdsvex](https://mdsvex.com) (The one and only svelte markdown preprocessor, it's in charge of rendering our markdown into html that we can put on the page)
 
 Deployment:
-- Vercel, cause like, why not?
+- [Vercel](https://vercel.com), cause like, why not? (also it's cool)
 
 ---
 
