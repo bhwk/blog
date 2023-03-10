@@ -1,4 +1,5 @@
 <script lang="ts">
 </script>
 
-<div>this is the homepage</div>
+<title>Blog</title>
+<div class="text-content">this is the homepage</div>

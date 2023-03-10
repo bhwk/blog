@@ -6,6 +6,8 @@
 	let { allPosts } = data;
 </script>
 
+<title>Posts</title>
+
 <div class="flex flex-1 flex-col gap-4">
 	{#each allPosts as post}
 		<a href={'posts/' + post.slug} class="flex-1 rounded-sm flex flex-col">
