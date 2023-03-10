@@ -17,4 +17,11 @@ model Post {
   published   Boolean  @default(false)
   slug        String?  @unique
   publishedAt DateTime @default(now())
+  tags        Tag[]
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  posts Post[]
 }
