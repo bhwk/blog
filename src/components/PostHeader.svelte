@@ -11,6 +11,7 @@
 		{title}
 	</div>
 	<div class="text-tag text-md">
-		<span class="text-date">&lt;Date&gt;: {year}-{month}-{day}</span> | &lt;Tags&gt;: {tags}
+		<span class="text-date ">&lt;{year}-{month}-{day}&gt;</span> |
+		<span class="italic">&lt;tags&gt;: {tags}</span>
 	</div>
 </div>
