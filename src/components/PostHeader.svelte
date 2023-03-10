@@ -1,7 +1,9 @@
 <script lang="ts">
 	export let title: string;
 	export let tags: string[];
-	export let date: string;
+	export let year: number;
+	export let month: number;
+	export let day: number;
 </script>
 
 <div class="mb-4">
@@ -9,6 +11,6 @@
 		{title}
 	</div>
 	<div class="text-tag text-md">
-		<span class="text-date">&lt;Date&gt;: {date}</span> | &lt;Tags&gt;: {tags}
+		<span class="text-date">&lt;Date&gt;: {year}-{month}-{day}</span> | &lt;Tags&gt;: {tags}
 	</div>
 </div>
