@@ -9,7 +9,8 @@ module.exports = {
 				title: '#ff9e64',
 				content: '#c0caf5',
 				tag: '#565f89',
-				date: '#bb9af7'
+				date: '#bb9af7',
+				heading: '#7aa2f7'
 			},
 			lineClamp: {
 				7: '7',
