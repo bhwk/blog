@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Post } from '@prisma/client';
 	import type { PageData } from './$types';
 	import PostHeader from '../../components/PostHeader.svelte';
 	export let data: PageData;
@@ -8,7 +7,7 @@
 
 <title>Posts</title>
 
-<div class="flex flex-1 flex-col gap-4">
+<div class="flex flex-1 flex-col gap-8">
 	{#each allPosts as post}
 		<a href={'posts/' + post.slug} class="flex-1 rounded-sm flex flex-col">
 			<PostHeader
@@ -19,7 +18,7 @@
 				tags={['#Testing']}
 			/>
 			<div class="text-content font-semibold line-clamp-10">
-				{post.content}
+				{@html post.content}
 			</div>
 		</a>
 	{/each}
