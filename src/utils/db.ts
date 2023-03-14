@@ -17,6 +17,30 @@ export async function allPosts() {
 	};
 }
 
+export async function searchTag(tag: string) {
+	const allPosts = await prisma.post.findMany({
+		where: {
+			tags: {
+				some: {
+					name: {
+						contains: tag
+					}
+				}
+			}
+		},
+		include: {
+			tags: true
+		}
+	});
+	allPosts.forEach(async (post) => {
+		const response = await compile(post.content as string);
+		post.content = response?.code as string;
+	});
+	return {
+		allPosts: allPosts
+	};
+}
+
 export async function getPost(slug: string) {
 	const response = await prisma.post
 		.findUniqueOrThrow({
