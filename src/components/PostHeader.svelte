@@ -18,7 +18,7 @@
 		<span class="italic"
 			>&lt;tags&gt;:
 			{#each tags as tag}
-				<a href="/" class="hover:text-link transition-colors">
+				<a href="/tag/{tag}" class="hover:text-link transition-colors">
 					{'#' + tag}
 				</a>
 			{/each}
